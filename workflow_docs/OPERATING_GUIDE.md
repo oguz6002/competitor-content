@@ -34,6 +34,15 @@ For the web ChatGPT phase, use this rule consistently:
 
 This keeps ChatGPT-reviewed outputs separate from final approved files.
 
+## ChatGPT Threading Rule
+
+Use one ChatGPT thread per article during the web review phase.
+
+- If you are revising the same article again, continue in the same thread.
+- If you are reviewing a different article, start a new thread.
+
+This keeps source context, revisions, and returned full-article replacements clean and traceable.
+
 ## Shared Production Model
 
 This repo follows this working model:

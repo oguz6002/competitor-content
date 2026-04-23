@@ -30,6 +30,13 @@ For the web ChatGPT phase:
 - save the returned article into `chatgpt_reviewed/articles/`
 - move only accepted versions into `approved/articles/`
 
+## ChatGPT Threading Rule
+
+Use one ChatGPT thread per article during the web review phase.
+
+- Continue in the same thread only for follow-up revisions of that same article.
+- Start a new thread for a different article.
+
 ## Core Principle
 
 Each row in the hub CSV should become:
