@@ -27,7 +27,7 @@ For the web ChatGPT phase:
 
 - start from the generated draft plus the relevant source and research materials
 - return the full reviewed article in Markdown
-- save the returned article into `chatgpt_reviewed/articles/`
+- manually copy the returned article into `chatgpt_reviewed/articles/`
 - move only accepted versions into `approved/articles/`
 
 ## ChatGPT Threading Rule
@@ -177,6 +177,8 @@ Save the ChatGPT-reviewed full replacements into:
 ```text
 chatgpt_reviewed\articles\
 ```
+
+These reviewed articles must be copied manually from the ChatGPT web response into the repo.
 
 ### 6. Approve reviewed articles
 

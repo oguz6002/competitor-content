@@ -30,10 +30,11 @@ For the web ChatGPT phase, use this rule consistently:
 
 - read from `generated/` plus the relevant research/source materials
 - return the full reviewed article as Markdown
-- save that returned article into `chatgpt_reviewed/articles/`
+- manually copy the returned article into `chatgpt_reviewed/articles/`
 - only move accepted versions into `approved/articles/`
 
 This keeps ChatGPT-reviewed outputs separate from final approved files.
+ChatGPT web should be treated as a reviewer and rewriter, not as a tool that automatically writes files back into the repository.
 
 ## ChatGPT Threading Rule
 
@@ -54,6 +55,8 @@ Preferred new-thread pattern:
 
 - `Review article: [ARTICLE_FILE].md`
 - or `Review article: [ARTICLE_SLUG]`
+
+For ChatGPT web, the article name or article filename should be the only prompt needed in a new article chat when the project instructions are configured correctly.
 
 The project instructions should handle:
 
@@ -181,7 +184,7 @@ What happens here:
 - remove repetitive phrasing
 - improve title and heading quality
 - keep the article aligned to source support and competitive intent
-- save the ChatGPT-reviewed article as a full Markdown replacement in `chatgpt_reviewed/articles/`
+- manually copy the returned ChatGPT-reviewed article into `chatgpt_reviewed/articles/` as a full Markdown replacement
 
 Main output:
 
@@ -196,6 +199,7 @@ Goal:
 What happens here:
 
 - check the reviewed article for final acceptance
+- manually review the returned article after copying it from ChatGPT web into `chatgpt_reviewed/articles/`
 - move or copy the accepted full replacement into `approved/articles/`
 - keep `approved/articles/` as the merge-ready folder only
 
@@ -226,6 +230,7 @@ Main output:
 - Do not invent unsupported claims.
 - Approved article files must always be full replacement articles, not patch notes.
 - ChatGPT web outputs belong in `chatgpt_reviewed/articles/`, not directly in `approved/articles/`.
+- ChatGPT web does not automatically push reviewed articles into the repo; the returned Markdown must be copied into `chatgpt_reviewed/articles/` manually.
 
 ## Recommended Team Handoff Method
 
