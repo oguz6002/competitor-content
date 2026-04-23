@@ -11,6 +11,16 @@ That CSV is the source of truth for:
 - hub page planning
 - supporting article generation
 
+## Quick Links
+
+- [Operating guide](./OPERATING_GUIDE.md)
+- [Competitor research sheet prompt](../prompts/01a-competitor-research-sheet.md)
+- [Hub strategy prompt](../prompts/01-skyscraper-research.md)
+- [Skyscraper draft prompt](../prompts/02-skyscraper-draft.md)
+- [Article QA prompt](../prompts/03-article-qa.md)
+- [Final publish QA prompt](../prompts/04-final-publish-qa.md)
+- [Web article draft prompt](../prompts/05-web-article-draft-prompt.md)
+
 ## Core Principle
 
 Each row in the hub CSV should become:
@@ -52,6 +62,10 @@ The goal is not just to write pages. The goal is to turn each hub into a cluster
 
 ### 1. Build the workspace from the hub CSV
 
+Related links:
+
+- [Operating guide: Source](./OPERATING_GUIDE.md#1-source)
+
 Run:
 
 ```powershell
@@ -69,6 +83,12 @@ This generates:
 
 ### 2. Research each hub
 
+Related links:
+
+- [Operating guide: Research](./OPERATING_GUIDE.md#2-research)
+- [Competitor research sheet prompt](../prompts/01a-competitor-research-sheet.md)
+- [Hub strategy prompt](../prompts/01-skyscraper-research.md)
+
 For each priority hub:
 
 1. open the row in `research\hub_research_queue.csv`
@@ -82,6 +102,12 @@ Use:
 - `prompts\01-skyscraper-research.md`
 
 ### 3. Draft the hub page and supporting articles
+
+Related links:
+
+- [Operating guide: Generation](./OPERATING_GUIDE.md#3-generation)
+- [Skyscraper draft prompt](../prompts/02-skyscraper-draft.md)
+- [Web article draft prompt](../prompts/05-web-article-draft-prompt.md)
 
 Use `generated\content_draft_queue.csv` as the master queue.
 
@@ -103,6 +129,11 @@ Use:
 
 ### 4. Run automated QA
 
+Related links:
+
+- [Operating guide: Editorial Checks](./OPERATING_GUIDE.md#4-editorial-checks)
+- [Article QA prompt](../prompts/03-article-qa.md)
+
 Once `generated\content_drafts.csv` exists, run:
 
 ```powershell
@@ -116,6 +147,11 @@ This creates:
 
 ### 5. Final editorial QA
 
+Related links:
+
+- [Operating guide: Before Publishing Review](./OPERATING_GUIDE.md#5-before-publishing-review)
+- [Final publish QA prompt](../prompts/04-final-publish-qa.md)
+
 Use ChatGPT web for final review of individual finished articles.
 
 Save approved replacements into:
@@ -125,6 +161,10 @@ approved\articles\
 ```
 
 ### 6. Merge approved articles back
+
+Related links:
+
+- [Operating guide: Merge](./OPERATING_GUIDE.md#6-merge)
 
 Run:
 
