@@ -7,6 +7,12 @@ Start here:
 - [Operating guide](./workflow_docs/OPERATING_GUIDE.md)
 - [Workflow overview](./workflow_docs/WORKFLOW.md)
 
+ChatGPT web handoff:
+
+- read from generated drafts and the relevant research/source materials
+- save ChatGPT-reviewed full replacements into `chatgpt_reviewed/articles/`
+- move only accepted versions into `approved/articles/`
+
 Main prompt files:
 
 - [prompts/01a-competitor-research-sheet.md](./prompts/01a-competitor-research-sheet.md)

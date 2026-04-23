@@ -23,11 +23,22 @@ Use this guide to answer 3 questions quickly:
 2. Which prompt should I use?
 3. What file should I update next?
 
+## ChatGPT Web Handoff
+
+For the web ChatGPT phase, use this rule consistently:
+
+- read from `generated/` plus the relevant research/source materials
+- return the full reviewed article as Markdown
+- save that returned article into `chatgpt_reviewed/articles/`
+- only move accepted versions into `approved/articles/`
+
+This keeps ChatGPT-reviewed outputs separate from final approved files.
+
 ## Shared Production Model
 
 This repo follows this working model:
 
-`source -> research -> generation -> QA -> approved full-article rewrites -> merge`
+`source -> research -> generation -> QA -> chatgpt_reviewed full-article rewrites -> approved -> merge`
 
 This means the team should treat work as a staged pipeline rather than drafting directly from scratch without process context.
 
@@ -100,6 +111,7 @@ What happens here:
 Main output:
 
 - generated article drafts
+- draft articles ready to send into ChatGPT web review
 
 ## 4. Editorial Checks
 
@@ -122,6 +134,7 @@ What happens here:
 Main output:
 
 - corrected draft ready for final publish review
+- a clear handoff into `chatgpt_reviewed/articles/` for ChatGPT web outputs
 
 ## 5. Before Publishing Review
 
@@ -140,13 +153,29 @@ What happens here:
 - remove repetitive phrasing
 - improve title and heading quality
 - keep the article aligned to source support and competitive intent
-- save the final approved article as a full Markdown replacement
+- save the ChatGPT-reviewed article as a full Markdown replacement in `chatgpt_reviewed/articles/`
+
+Main output:
+
+- reviewed article in `chatgpt_reviewed/articles/`
+
+## 6. Approval
+
+Goal:
+
+- review the ChatGPT-reviewed article and move only accepted versions into the final approval folder
+
+What happens here:
+
+- check the reviewed article for final acceptance
+- move or copy the accepted full replacement into `approved/articles/`
+- keep `approved/articles/` as the merge-ready folder only
 
 Main output:
 
 - final approved article in `approved/articles/`
 
-## 6. Merge
+## 7. Merge
 
 Related links:
 
@@ -168,6 +197,7 @@ Main output:
 - Do not copy competitor wording.
 - Do not invent unsupported claims.
 - Approved article files must always be full replacement articles, not patch notes.
+- ChatGPT web outputs belong in `chatgpt_reviewed/articles/`, not directly in `approved/articles/`.
 
 ## Recommended Team Handoff Method
 
@@ -178,6 +208,7 @@ Use the same handoff stages for each article or hub:
 - `Generation complete`
 - `QA complete`
 - `Ready for publishing review`
+- `ChatGPT reviewed`
 - `Approved`
 - `Merged`
 
@@ -186,5 +217,6 @@ Use the same handoff stages for each article or hub:
 1. Start with this guide.
 2. Open the workflow overview.
 3. Use the prompt that matches the current stage.
-4. Save approved articles as full replacements.
-5. Merge approved work back into the master outputs.
+4. Save ChatGPT-reviewed articles into `chatgpt_reviewed/articles/`.
+5. Move only accepted versions into `approved/articles/`.
+6. Merge approved work back into the master outputs.

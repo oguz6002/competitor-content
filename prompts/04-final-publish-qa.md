@@ -17,4 +17,5 @@ Check for:
 Keep the meaning intact.
 Do not add unsupported claims.
 Return the full final article in Markdown only.
+This returned article is intended to be saved into `chatgpt_reviewed/articles/` before final approval.
 ```

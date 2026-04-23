@@ -21,6 +21,15 @@ That CSV is the source of truth for:
 - [Final publish QA prompt](../prompts/04-final-publish-qa.md)
 - [Web article draft prompt](../prompts/05-web-article-draft-prompt.md)
 
+## ChatGPT Web Handoff
+
+For the web ChatGPT phase:
+
+- start from the generated draft plus the relevant source and research materials
+- return the full reviewed article in Markdown
+- save the returned article into `chatgpt_reviewed/articles/`
+- move only accepted versions into `approved/articles/`
+
 ## Core Principle
 
 Each row in the hub CSV should become:
@@ -53,8 +62,10 @@ The goal is not just to write pages. The goal is to turn each hub into a cluster
   Draft queues and draft exports.
 - `review_queue/`
   Automated QA outputs after drafts exist.
+- `chatgpt_reviewed/articles/`
+  Full article replacements returned from ChatGPT web before final approval.
 - `approved/articles/`
-  Final reviewed article markdown files.
+  Final accepted article markdown files ready for merge-back.
 - `prompts/`
   Reusable prompts for research, drafting, QA, and final review.
 
@@ -154,17 +165,31 @@ Related links:
 
 Use ChatGPT web for final review of individual finished articles.
 
-Save approved replacements into:
+Save the ChatGPT-reviewed full replacements into:
+
+```text
+chatgpt_reviewed\articles\
+```
+
+### 6. Approve reviewed articles
+
+Related links:
+
+- [Operating guide: Approval](./OPERATING_GUIDE.md#6-approval)
+
+Review the files in `chatgpt_reviewed\articles\`.
+
+Move or copy accepted replacements into:
 
 ```text
 approved\articles\
 ```
 
-### 6. Merge approved articles back
+### 7. Merge approved articles back
 
 Related links:
 
-- [Operating guide: Merge](./OPERATING_GUIDE.md#6-merge)
+- [Operating guide: Merge](./OPERATING_GUIDE.md#7-merge)
 
 Run:
 
@@ -191,7 +216,7 @@ Use the web model for:
 - hub competitor analysis
 - hub strategy refinement
 - page-by-page drafting
-- final editorial QA
+- final editorial QA that returns full reviewed replacements into `chatgpt_reviewed/articles/`
 
 ## The Skyscraper Rule Set
 
@@ -209,4 +234,5 @@ Every hub and article should aim to:
 2. `research`
 3. `generated`
 4. `review_queue`
-5. `approved`
+5. `chatgpt_reviewed`
+6. `approved`
