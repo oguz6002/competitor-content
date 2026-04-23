@@ -8,6 +8,7 @@ Use the repo workflow and prompt files as the detailed instructions.
 ## Quick Links
 
 - [Workflow overview](./WORKFLOW.md)
+- [Competitor thread template](./chatgpt_thread_template_competitor.md)
 - [Competitor research sheet prompt](../prompts/01a-competitor-research-sheet.md)
 - [Hub strategy prompt](../prompts/01-skyscraper-research.md)
 - [Skyscraper draft prompt](../prompts/02-skyscraper-draft.md)
