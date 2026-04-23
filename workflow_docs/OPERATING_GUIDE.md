@@ -44,6 +44,24 @@ Use one ChatGPT thread per article during the web review phase.
 
 This keeps source context, revisions, and returned full-article replacements clean and traceable.
 
+## ChatGPT Project Setup
+
+For ChatGPT web, put the long stable rules into the project instructions.
+
+Then keep each new article chat short.
+
+Preferred new-thread pattern:
+
+- `Review article: [ARTICLE_FILE].md`
+- or `Review article: [ARTICLE_SLUG]`
+
+The project instructions should handle:
+
+- inspecting the repo docs first
+- locating the matching generated draft and relevant research/source materials
+- confirming the output target in `chatgpt_reviewed/articles/`
+- applying the workflow and prompt rules automatically
+
 ## Shared Production Model
 
 This repo follows this working model:

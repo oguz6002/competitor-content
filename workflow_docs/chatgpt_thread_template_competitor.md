@@ -2,6 +2,14 @@
 
 Use this template when starting a new ChatGPT web thread for one competitor-content article.
 
+Shortest preferred version:
+
+```text
+Review article: [ARTICLE_FILE].md
+```
+
+If the project instructions are configured correctly, that short form should be enough.
+
 ```text
 This thread is for one article only.
 
